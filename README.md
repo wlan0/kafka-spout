@@ -20,3 +20,10 @@ License
 -------
 This work is licensed under the Apache License, Version 2.0.
 See [LICENSE](./LICENSE) for details.
+
+COMMIT - Ack Every Message
+----------------------------
+
+Whole point of this commit is to only ack(and commit) messages that have been processed, but this approach loses performance badly, as I'm acking every message that I receive, introducing too much overhead.
+
+In the next commit, will need to have the ability to commit upto a certain message Id, denoting that all messages till that Id have been processed.
